@@ -1,0 +1,779 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="de-formal">
+  <siteinfo>
+    <sitename>MfN Issue Tracker</sitename>
+    <dbname>mfn_issue</dbname>
+    <base>http://biowikifarm.net/v-mfn/issue/Issue_Tracker</base>
+    <generator>MediaWiki 1.26alpha</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Medium</namespace>
+      <namespace key="-1" case="first-letter">Spezial</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Diskussion</namespace>
+      <namespace key="2" case="first-letter">Benutzer</namespace>
+      <namespace key="3" case="first-letter">Benutzer Diskussion</namespace>
+      <namespace key="4" case="first-letter">MfN Issue Tracker</namespace>
+      <namespace key="5" case="first-letter">MfN Issue Tracker Diskussion</namespace>
+      <namespace key="6" case="first-letter">Datei</namespace>
+      <namespace key="7" case="first-letter">Datei Diskussion</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki Diskussion</namespace>
+      <namespace key="10" case="first-letter">Vorlage</namespace>
+      <namespace key="11" case="first-letter">Vorlage Diskussion</namespace>
+      <namespace key="12" case="first-letter">Hilfe</namespace>
+      <namespace key="13" case="first-letter">Hilfe Diskussion</namespace>
+      <namespace key="14" case="first-letter">Kategorie</namespace>
+      <namespace key="15" case="first-letter">Kategorie Diskussion</namespace>
+      <namespace key="102" case="first-letter">Attribut</namespace>
+      <namespace key="103" case="first-letter">Attribut Diskussion</namespace>
+      <namespace key="104" case="first-letter">Type</namespace>
+      <namespace key="105" case="first-letter">Type talk</namespace>
+      <namespace key="106" case="first-letter">Formular</namespace>
+      <namespace key="107" case="first-letter">Formular Diskussion</namespace>
+      <namespace key="108" case="first-letter">Konzept</namespace>
+      <namespace key="109" case="first-letter">Konzept Diskussion</namespace>
+      <namespace key="198" case="first-letter">Internal</namespace>
+      <namespace key="199" case="first-letter">Internal talk</namespace>
+      <namespace key="200" case="first-letter">Portal</namespace>
+      <namespace key="201" case="first-letter">Portal talk</namespace>
+      <namespace key="202" case="first-letter">Bibliography</namespace>
+      <namespace key="203" case="first-letter">Bibliography talk</namespace>
+      <namespace key="204" case="first-letter">Draft</namespace>
+      <namespace key="205" case="first-letter">Draft talk</namespace>
+      <namespace key="206" case="first-letter">Submission</namespace>
+      <namespace key="207" case="first-letter">Submission talk</namespace>
+      <namespace key="208" case="first-letter">Reviewed</namespace>
+      <namespace key="209" case="first-letter">Reviewed talk</namespace>
+      <namespace key="460" case="case-sensitive">Campaign</namespace>
+      <namespace key="461" case="case-sensitive">Campaign talk</namespace>
+      <namespace key="500" case="first-letter">Erweitert</namespace>
+      <namespace key="501" case="first-letter">Erweitert Diskussion</namespace>
+      <namespace key="511" case="first-letter">Portal Diskussion</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Vorlage:Aufgabe</title>
+    <ns>10</ns>
+    <id>3</id>
+    <revision>
+      <id>60</id>
+      <parentid>59</parentid>
+      <timestamp>2015-07-14T08:08:10Z</timestamp>
+      <contributor>
+        <username>Alvaro Ortiz-Troncoso</username>
+        <id>899</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="3529">&lt;includeonly&gt;{{DISPLAYTITLE: Aufgabe - {{PAGENAME}}}}
+__NOEDITSECTION__
+&lt; [[Issue Tracker| zurück zum Issue Tracker]]
+
+{{#if:{{{Priorität}}} |
+{{#switch:{{{Status}}}
+|Neu={{Status_-_Neu}}
+|In Bearbeitung={{Status_-_in_Bearbeitung}}
+|Bereit={{Status_-_Bereit_zum_Review}}
+|Überarbeiten={{Status_-_Überarbeiten}}
+|Archiviert=
+}}
+}}
+
+=Beschreibung=
+
+==Erstellt von==
+&lt;div class=&quot;tip&quot;&gt;Name bzw. Wiki-Nutzername der Mitarbeiter, der diesen Verbesserungsvorschlag gemeldet hat.&lt;/div&gt;
+[[User:{{{Melder}}}|{{{Melder|}}}]]
+{{#set: Melder={{{Melder|}}}}}
+
+==Projekt==
+&lt;div class=&quot;tip&quot;&gt;Name des Projekts, worauf sich diese Aufgabe bezieht.&lt;/div&gt;
+'''{{{Projekt|unbekannt}}}'''
+{{#set: Projekt={{{Projekt}}}}}
+
+==Erstelldatum==
+&lt;div class=&quot;tip&quot;&gt;Datum an dem die Aufgabe definiert wurde, und dann wichtig wird, wenn mehrere Aufgaben die gleiche Priorität haben.&lt;/div&gt; 
+'''{{{Erstelldatum|nicht angegeben}}}'''
+{{#set: Erstelldatum={{{Erstelldatum}}}}}
+
+==Beschreibung des Verbesserungsvorschlags, Fehlermeldung oder Aufgabe==
+&lt;div class=&quot;tip&quot;&gt;Hier erfolgt eine kurze Beschreibung des Verbesserungsvorschlags. Kurz bedeutet, dass es zehn Zeilen sind, selten mehr. Längere Beschreibungen bitte auf einer eigener Seite verlinken.&lt;/div&gt;
+[[Kurzbeschreibung::{{{Kurzbeschreibung|}}}]]
+
+==Priorität==
+&lt;div class=&quot;tip&quot;&gt;
+&lt;div class=&quot;mw-collapsible mw-collapsed&quot;&gt;
+Ein Wert, der die Priorität dieser Aufgabe definiert und beim plannen angewendet wird (besonders, wenn durch Zeitmangel nicht alle Aufgaben ausgeführt werden können).
+&lt;div class=&quot;mw-collapsible-content&quot;&gt;
+;Niedrig
+:Hier werden Aufgaben eingestuft, die erst nach der Abfertigung aller anderen Aufgaben berücksichtigt werden. 
+;Wichtig (Standardwert)
+:Aufgaben, die möglischst innerhalb eines absehbares Zeitraums durchzuführen sind.
+;Kritisch
+:Probleme, die den Ablauf des Projekts hemmen, sollen sofort erledigt werden. Nur wenige Aufgaben können innerhalb eines bestimmten Zeitrahmens als &quot;kritisch&quot; eingestuft werden (I.d.R. nur eine). 
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+'''{{{Priorität|Wichtig}}}'''
+{{#set: Priorität={{{Priorität|Wichtig}}}}}
+&lt;hr/&gt;
+=Lösung=
+
+==Status==
+&lt;div class=&quot;tip&quot;&gt;&lt;div class=&quot;mw-collapsible mw-collapsed&quot;&gt;
+Ein Wert, der den Der Bearbeitungsstatus innerhalb des Entwicklugszyklus entspricht. Aufgaben werden in der Aufgabenübersicht nach ihren aktuellen Status sortiert.
+&lt;div class=&quot;mw-collapsible-content&quot;&gt;
+;Neu (Standardwert)
+:Noch nicht vom Kernteam analysiert.
+;In Bearbeitung
+:Die Aufgabe wird implementiert. 
+;Bereit
+:Implementiert und getestet
+;Überarbeiten
+:Die Aufgabe wurde neu geöffnet.
+;Archiviert
+:Die Aufgabe wurde erledigt und soll zwecks Projektdokumentation archiviert werden.
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+'''{{{Status|Neu}}}'''
+{{#set: Status={{{Status|Neu}}}}}
+
+==Bearbeiter==
+&lt;div class=&quot;tip&quot;&gt;Wiki-Nutzername der Mitarbeiter, dem diese Aufgabe zugewiesen worden ist.&lt;/div&gt;
+{{#if:{{{Bearbeiter|}}}|[[User:{{{Bearbeiter}}}|{{{Bearbeiter}}}]]
+{{#set: Bearbeiter={{{Bearbeiter|}}}}}|}}
+
+==Beschreibung der Lösung==
+&lt;div class=&quot;tip&quot;&gt;Beschreibung der Lösung sowie verlinkungen zu unterstützenden Dokumenten, Spezifikationen oder Webseiten.&lt;/div&gt;
+[[Lösung::{{{Lösung|}}}]]
+
+&lt; [[Issue Tracker| zurück zum Issue Tracker]]
+
+{{#ifeq:{{{Status|}}} | Archiviert | [[Category:Aufgabe/Archiviert]] | 
+  {{#if:{{{Priorität|}}} |
+    [[Category:Aufgabe/{{{Priorität}}}/{{{Status|Neu}}}]]
+    | [[Category:Aufgabe]]
+  }}
+}}
+__NOTOC__
+[[Category:Aufgabe]]
+&lt;/includeonly&gt;
+&lt;noinclude&gt;{{Aufgabe/doc}}&lt;/noinclude&gt;
+&lt;noinclude&gt;[[Category:Issue Tracker]]&lt;/noinclude&gt;</text>
+      <sha1>2s8cg4qmmmm4tatrep91rbzi5v4w1bx</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Aufgabe/doc</title>
+    <ns>10</ns>
+    <id>4</id>
+    <revision>
+      <id>51</id>
+      <parentid>4</parentid>
+      <timestamp>2015-07-14T07:52:19Z</timestamp>
+      <contributor>
+        <username>Alvaro Ortiz-Troncoso</username>
+        <id>899</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="2558">== Anwendung == 
+
+{| width=&quot;40%&quot;
+|-
+|- valign=&quot;top&quot;
+| align=&quot;left&quot; |
+&lt;span id=&quot;CutAndPaste&quot;&gt;Einfügen:&lt;/span&gt;
+
+&lt;pre&gt;
+{{Aufgabe|
+Kurzbeschreibung = 
+|
+Priorität = 
+|
+Status =
+|
+Erstelldatum = 
+|
+Melder = 
+|
+Projekt=
+|
+Bearbeiter = 
+|
+Lösung = 
+|
+Hinweise =
+}}
+&lt;/pre&gt;
+|}
+
+{| class=&quot;wikitable&quot;
+|-
+! Parameter 
+! Beschreibung
+! Format
+! Pflichtfeld
+|-
+| Kurzbeschreibung || Hier erfolgt eine kurze Beschreibung, was in der Aufgabe passieren soll. Kurz bedeutet, dass es zwei oder drei Zeilen sind, selten mehr. Längere Beschreibungen bitte auf einer eigener Seite verlinken. || String || ja
+|-
+| Priorität || 
+Ein Wert, der die Priorität dieser Aufgabe definiert und beim plannen angewendet wird (besonders, wenn durch Zeitmangel nicht alle Aufgaben ausgeführt werden können).
+
+''Die folgenden Prioritätsangaben werden verwendet:''
+
+;Niedrig
+:Hier werden Aufgaben eingestuft, die erst nach der Abfertigung aller anderen Aufgaben berücksichtigt werden. 
+;Wichtig (Standardwert)
+:Aufgaben, die möglischst innerhalb des abgesprochenen Zeiraums durchzuführen sind.
+;Kritisch
+:Probleme, die den Ablauf des Projekts hemmen, sollen sofort erledigt werden. Nur wenige Aufgaben können innerhalb eines bestimmten Zeitrahmens als &quot;kritisch&quot; eingestuft werden (I.d.R. nur eine). 
+ || String || ja
+
+|-
+| Status || 
+Ein Wert, der den Der Bearbeitungsstatus innerhalb des Entwicklugszyklus entspricht. Aufgaben werden in der Aufgabenübersicht nach ihren aktuellen Status sortiert. 
+
+''Die folgenden Statusangaben werden verwendet. Diese sind eine Teilmenge der [[Hilfe:Statushinweise]]:''
+
+;Neu (Standardwert)
+:Noch nicht vom Kernteam analysiert.
+;In Bearbeitung
+:Die Aufgabe wird implementiert. 
+;Bereit
+:Implementiert und getestet
+;Überarbeiten
+:Die Aufgabe wurde neu geöffnet.
+; Archiviert
+:Die Aufgabe wurde erledigt und soll zwecks Projektdokumentation archiviert werden.
+
+Sieh auch: [[Hilfe:Statushinweise]]
+
+ || String || ja
+
+|-
+| Erstellddatum || 
+Datum an dem die Aufgabe definiert wurde, und dann wichtig wird, wenn mehrere Aufgaben die gleiche Priorität haben.
+ || String || ja
+
+|-
+| Melder|| 
+Wiki-Nutzername der Mitarbeiter, der diesen Verbesserungsvorschlag gemeldet hat. 
+ || String || nein
+
+|-
+|Projekt||
+Name des Projekts, worauf sich diese Aufgabe bezieht.
+ || String || ja
+
+|-
+| Bearbeiter || 
+Wiki-Nutzername der Mitarbeiter, dem diese Aufgabe zugewiesen worden ist. 
+ || String || nein
+
+|-
+| Hinweise || Verlinkungen zu unterstützenden Dokumenten, Spezifikationen oder Webseiten. Notizen.
+ || String || nein
+
+|}
+
+[[Category:Issue Tracker]]</text>
+      <sha1>q0aomk5btopah0n0rxrrm2fly6dtmtz</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Formular:Aufgabe</title>
+    <ns>106</ns>
+    <id>5</id>
+    <revision>
+      <id>57</id>
+      <parentid>56</parentid>
+      <timestamp>2015-07-14T07:59:32Z</timestamp>
+      <contributor>
+        <username>Alvaro Ortiz-Troncoso</username>
+        <id>899</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="4449">&lt;noinclude&gt;
+Dies ist das Formular „Aufgabe“.
+Um eine Seite mit diesem Formular zu erstellen, geben Sie den Seitennamen unten in das Eingabefeld ein.
+Sofern bereits eine Seite mit diesem Namen vorhanden ist, werden Sie automatisch zum Formular für das Bearbeiten der Seite weitergeleitet.
+{{#forminput:form=Aufgabe|autocomplete on category=Aufgabe}}
+&lt;/noinclude&gt;&lt;includeonly&gt;
+__NOTOC__
+__NOEDITSECTION__
+&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+{{{for template|Aufgabe}}}
+=Beschreibung=
+==Erstellt von==
+&lt;div class=&quot;editproperty&quot;&gt;[http://biowikifarm.net/v-mfn/issue/Property:Melder Edit property]&lt;/div&gt;
+&lt;div class=&quot;tip&quot;&gt;Name bzw. Wiki-Nutzername der Mitarbeiter, der diesen Verbesserungsvorschlag gemeldet hat.&lt;/div&gt;
+{{{field|Melder|input type=text with autocomplete|values from namespace=User}}}
+
+==Projekt==
+&lt;div class=&quot;editproperty&quot;&gt;[http://biowikifarm.net/v-mfn/issue/Property:Projekt Edit property]&lt;/div&gt;
+&lt;div class=&quot;tip&quot;&gt;Name des Projekts, worauf sich diese Aufgabe bezieht.&lt;/div&gt;
+{{{field|Projekt||property=Projekt|input type=dropdown}}}
+
+==Erstelldatum==
+&lt;div class=&quot;editproperty&quot;&gt;[http://biowikifarm.net/v-mfn/issue/Property:Erstelldatum Edit property]&lt;/div&gt;
+&lt;div class=&quot;tip&quot;&gt;Datum an dem die Aufgabe definiert wurde, und dann wichtig wird, wenn mehrere Aufgaben die gleiche Priorität haben.&lt;/div&gt; 
+&lt;table class=&quot;metadata&quot;&gt;&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;{{{field|Erstelldatum|input type=date}}}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+==Beschreibung des Verbesserungsvorschlags, Fehlermeldung oder Aufgabe==
+&lt;div class=&quot;editproperty&quot;&gt;[http://biowikifarm.net/v-mfn/issue/Property:Kurzbeschreibung Edit property]&lt;/div&gt;
+&lt;div class=&quot;tip&quot;&gt;Hier erfolgt eine kurze Beschreibung des Verbesserungsvorschlags. Kurz bedeutet, dass es zehn Zeilen sind, selten mehr. Längere Beschreibungen bitte auf einer eigener Seite verlinken.&lt;/div&gt;
+{{{field|Kurzbeschreibung|input type=textarea|rows=10|editor=wikieditor}}}
+
+==Priorität==
+&lt;div class=&quot;editproperty&quot;&gt;[http://biowikifarm.net/v-mfn/issue/Property:Priorität Edit property]&lt;/div&gt;
+&lt;div class=&quot;tip&quot;&gt;
+Ein Wert, der die Priorität dieser Aufgabe definiert und beim plannen angewendet wird (besonders, wenn durch Zeitmangel nicht alle Aufgaben ausgeführt werden können).
+
+;Niedrig
+:Hier werden Aufgaben eingestuft, die erst nach der Abfertigung aller anderen Aufgaben berücksichtigt werden. 
+;Wichtig (Standardwert)
+:Aufgaben, die möglischst innerhalb eines absehbares Zeitraums durchzuführen sind.
+;Kritisch
+:Probleme, die den Ablauf des Projekts hemmen, sollen sofort erledigt werden. Nur wenige Aufgaben können innerhalb eines bestimmten Zeitrahmens als &quot;kritisch&quot; eingestuft werden (I.d.R. nur eine). 
+&lt;/div&gt;
+{{{field|Priorität|input type=dropdown|property=Priorität|default=Wichtig}}}
+
+=Lösung=
+'''Die folgenden Felder werden i.d.R. vom Kernteam bearbeitet.'''
+==Status==
+&lt;div class=&quot;editproperty&quot;&gt;[http://biowikifarm.net/v-mfn/issue/Property:Status Edit property]&lt;/div&gt;
+&lt;div class=&quot;tip&quot;&gt;
+Ein Wert, der den Der Bearbeitungsstatus innerhalb des Entwicklugszyklus entspricht. Aufgaben werden in der Aufgabenübersicht nach ihren aktuellen Status sortiert.
+
+;Neu (Standardwert)
+:Noch nicht vom Kernteam analysiert.
+;In Bearbeitung
+:Die Aufgabe wird implementiert. 
+;Bereit
+:Implementiert und getestet
+;Überarbeiten
+:Die Aufgabe wurde neu geöffnet.
+;Archiviert
+:Die Aufgabe wurde erledigt und soll zwecks Projektdokumentation archiviert werden.
+&lt;/div&gt;
+{{{field|Status|input type=dropdown|property=Status|default=Neu}}}
+
+==Bearbeiter==
+&lt;div class=&quot;editproperty&quot;&gt;[http://biowikifarm.net/v-mfn/issue/Property:Bearbeiter Edit property]&lt;/div&gt;
+&lt;div class=&quot;tip&quot;&gt;Wiki-Nutzername der Mitarbeiter, dem diese Aufgabe zugewiesen worden ist.&lt;/div&gt;
+{{{field|Bearbeiter|input type=text with autocomplete|values from namespace=User}}}
+
+==Beschreibung der Lösung==
+&lt;div class=&quot;editproperty&quot;&gt;[http://biowikifarm.net/v-mfn/issue/Property:Lösung Edit property]&lt;/div&gt;
+&lt;div class=&quot;tip&quot;&gt;Beschreibung der Lösung sowie verlinkungen zu unterstützenden Dokumenten, Spezifikationen oder Webseiten.&lt;/div&gt;
+{{{field|Lösung|input type=textarea|rows=10|editor=wikieditor}}}
+&lt;headertabs /&gt;
+
+{{{end template}}}
+
+{{{standard input|minor edit}}} {{{standard input|watch}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+&lt;/includeonly&gt;
+&lt;noinclude&gt;
+[[Category:Issue Tracker]]
+&lt;/noinclude&gt;</text>
+      <sha1>cx8ofbjjmd148lrfuhkowqhrfqla6da</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Bearbeiter</title>
+    <ns>102</ns>
+    <id>7</id>
+    <revision>
+      <id>8</id>
+      <parentid>7</parentid>
+      <timestamp>2015-07-06T08:38:23Z</timestamp>
+      <contributor>
+        <username>Alvaro Ortiz-Troncoso</username>
+        <id>899</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="83">Dies ist ein Attribut des Datentyps [[Datentyp::Text]].
+
+[[Category:Issue Tracker]]</text>
+      <sha1>lh99eg4vtabw3v47oep4zf8pni45gv8</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Hinweise</title>
+    <ns>102</ns>
+    <id>8</id>
+    <revision>
+      <id>9</id>
+      <timestamp>2015-07-06T08:38:46Z</timestamp>
+      <contributor>
+        <username>Alvaro Ortiz-Troncoso</username>
+        <id>899</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „Dies ist ein Attribut des Datentyps [[Datentyp::Text]].  [[Category:Issue Tracker]]“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="83">Dies ist ein Attribut des Datentyps [[Datentyp::Text]].
+
+[[Category:Issue Tracker]]</text>
+      <sha1>lh99eg4vtabw3v47oep4zf8pni45gv8</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Lösung</title>
+    <ns>102</ns>
+    <id>10</id>
+    <revision>
+      <id>11</id>
+      <timestamp>2015-07-06T08:40:34Z</timestamp>
+      <contributor>
+        <username>Alvaro Ortiz-Troncoso</username>
+        <id>899</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „Dies ist ein Attribut des Datentyps [[Datentyp::Text]].  [[Category:Issue Tracker]]“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="83">Dies ist ein Attribut des Datentyps [[Datentyp::Text]].
+
+[[Category:Issue Tracker]]</text>
+      <sha1>lh99eg4vtabw3v47oep4zf8pni45gv8</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Melder</title>
+    <ns>102</ns>
+    <id>11</id>
+    <revision>
+      <id>12</id>
+      <timestamp>2015-07-06T08:40:59Z</timestamp>
+      <contributor>
+        <username>Alvaro Ortiz-Troncoso</username>
+        <id>899</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „Dies ist ein Attribut des Datentyps [[Datentyp::Text]].  [[Category:Issue Tracker]]“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="83">Dies ist ein Attribut des Datentyps [[Datentyp::Text]].
+
+[[Category:Issue Tracker]]</text>
+      <sha1>lh99eg4vtabw3v47oep4zf8pni45gv8</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Portlet</title>
+    <ns>10</ns>
+    <id>12</id>
+    <revision>
+      <id>13</id>
+      <timestamp>2015-07-06T08:41:25Z</timestamp>
+      <contributor>
+        <username>Alvaro Ortiz-Troncoso</username>
+        <id>899</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „&lt;includeonly&gt;    &lt;div class=&quot;portlet {{{class|}}}&quot;&gt;       &lt;div class=&quot;header&quot;&gt;[[{{{link}}}|{{{titel}}}]] {{#if:{{{formular|}}}|&lt;div style=&quot;float: right&quot; class=…“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="976">&lt;includeonly&gt;
+   &lt;div class=&quot;portlet {{{class|}}}&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;[[{{{link}}}|{{{titel}}}]] {{#if:{{{formular|}}}|&lt;div style=&quot;float: right&quot; class=&quot;portletButton&quot;&gt;[[:Form:{{{formular}}}|Neu]]&lt;/div&gt;|}}&lt;/div&gt;
+      &lt;div class=&quot;content&quot;&gt;{{{inhalt}}}&lt;/div&gt;
+   &lt;/div&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+Baustein um beliebige Inhalte (z.B. Verzeichnisse) auf der Einstiegsseite zu kapseln.
+= Anwendung=
+Copy &amp; paste:
+&lt;pre&gt;
+{{Portlet 
+| titel =
+| link=
+| class =
+| inhalt =
+| formular =
+}}
+&lt;/pre&gt;
+
+=Parameter=
+{| class=&quot;wikitable&quot; width=&quot;100%&quot;
+|-
+! Parameter
+! Beschreibung
+! Format
+! Pflichtfeld
+|-
+| '''titel''' || Text im Titelbalken || Text || ja
+|-
+| '''link''' || Verknüpfung im Titelbalken || Wiki-Seite || nein
+|-
+| '''class''' || CSS class || String || nein
+|-
+| '''inhalt''' || Inhalt des Bausteins || Text || ja
+|-
+| '''formular''' || Titel der SMW-Formularseite, die mit dieser Kategorie assoziiert ist || Wiki-Seite || nein
+|}
+
+[[category: Issue Tracker]]&lt;/noinclude&gt;</text>
+      <sha1>j1hrfktw42mb1cjgevuntyy1whddjip</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Status - Bereit zum Review</title>
+    <ns>10</ns>
+    <id>14</id>
+    <revision>
+      <id>15</id>
+      <timestamp>2015-07-06T08:42:27Z</timestamp>
+      <contributor>
+        <username>Alvaro Ortiz-Troncoso</username>
+        <id>899</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „&lt;div class=&quot;note note-reminder&quot;&gt;'''Bereit''', aber noch nicht validiert.&lt;/div&gt; &lt;includeonly&gt; [[Category:Bereit zum Review]] &lt;/includeonly&gt; &lt;noinclude&gt; Vorlage…“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="271">&lt;div class=&quot;note note-reminder&quot;&gt;'''Bereit''', aber noch nicht validiert.&lt;/div&gt;
+&lt;includeonly&gt;
+[[Category:Bereit zum Review]]
+&lt;/includeonly&gt;
+&lt;noinclude&gt;
+Vorlage einfügen:
+&lt;pre&gt;{{Vorlage:Bereit}}
+&lt;/pre&gt;
+[[Category:Bearbeitungsstatus]][[Category:Issue Tracker]]
+&lt;/noinclude&gt;</text>
+      <sha1>2oks8qldg54uxnsjy8r74mq129o0981</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Status - in Bearbeitung</title>
+    <ns>10</ns>
+    <id>15</id>
+    <revision>
+      <id>17</id>
+      <parentid>16</parentid>
+      <timestamp>2015-07-06T08:43:08Z</timestamp>
+      <contributor>
+        <username>Alvaro Ortiz-Troncoso</username>
+        <id>899</id>
+      </contributor>
+      <minor/>
+      <comment>Alvaro Ortiz-Troncoso verschob die Seite [[•Vorlage:Status - in Bearbeitung]] nach [[Vorlage:Status - in Bearbeitung]], ohne dabei eine Weiterleitung anzulegen</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="238">&lt;div class=&quot;note note-error&quot;&gt;'''In Bearbeitung'''. Wird derzeit implementiert und getestet.&lt;/div&gt;
+&lt;includeonly&gt;
+[[Category:In Bearbeitung]]
+&lt;/includeonly&gt;
+&lt;noinclude&gt;
+[[Category:Bearbeitungsstatus]]
+[[Category:Issue Tracker]]
+&lt;/noinclude&gt;</text>
+      <sha1>kit3zz53b71i5jtkf9l144uaxscye1q</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Status - Neu</title>
+    <ns>10</ns>
+    <id>16</id>
+    <revision>
+      <id>18</id>
+      <timestamp>2015-07-06T08:43:32Z</timestamp>
+      <contributor>
+        <username>Alvaro Ortiz-Troncoso</username>
+        <id>899</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „&lt;div class=&quot;note note-new&quot;&gt;'''Neu'''. Noch nicht vom Kernteam analysiert.&lt;/div&gt; &lt;includeonly&gt; [[Category:Neu]] &lt;/includeonly&gt; &lt;noinclude&gt; Vorlage einfügen: &lt;p…“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="264">&lt;div class=&quot;note note-new&quot;&gt;'''Neu'''. Noch nicht vom Kernteam analysiert.&lt;/div&gt;
+&lt;includeonly&gt;
+[[Category:Neu]]
+&lt;/includeonly&gt;
+&lt;noinclude&gt;
+Vorlage einfügen:
+&lt;pre&gt;{{Vorlage:Status - Neu}}
+&lt;/pre&gt;
+[[Category:Bearbeitungsstatus]]
+[[Category:Issue Tracker]]&lt;/noinclude&gt;</text>
+      <sha1>nmwcwg8rpa0ayf9mcu8eqgfkz4lwksx</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Status - Überarbeiten</title>
+    <ns>10</ns>
+    <id>17</id>
+    <revision>
+      <id>19</id>
+      <timestamp>2015-07-06T08:44:01Z</timestamp>
+      <contributor>
+        <username>Alvaro Ortiz-Troncoso</username>
+        <id>899</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „&lt;div class=&quot;note note-cleanup&quot;&gt;Dieser Artikel oder Abschnitt bedarf einer '''Überarbeitung'''.&lt;/div&gt; &lt;includeonly&gt; [[Category:Überarbeiten]] &lt;/includeonly&gt; &lt;…“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="307">&lt;div class=&quot;note note-cleanup&quot;&gt;Dieser Artikel oder Abschnitt bedarf einer '''Überarbeitung'''.&lt;/div&gt;
+&lt;includeonly&gt;
+[[Category:Überarbeiten]]
+&lt;/includeonly&gt;
+&lt;noinclude&gt;
+Vorlage einfügen:
+&lt;pre&gt;{{Vorlage:Status - Überarbeiten}}
+&lt;/pre&gt;
+[[Category:Bearbeitungsstatus]]
+[[Category:Issue Tracker]]
+&lt;/noinclude&gt;</text>
+      <sha1>8nwjy4fmiidwkxq30tj5qenmcec7t1n</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Issue Tracker</title>
+    <ns>0</ns>
+    <id>19</id>
+    <revision>
+      <id>105</id>
+      <parentid>30</parentid>
+      <timestamp>2015-08-10T07:29:33Z</timestamp>
+      <contributor>
+        <username>Alvaro Ortiz-Troncoso</username>
+        <id>899</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="4734">__NOEDITSECTION__
+Um einen neuen Verbesserungsvorschlag, eine neue Aufgabe oder Fehlermeldung zu erstellen, geben Sie den Titel unten in das Eingabefeld ein.
+Sofern bereits eine Seite mit diesem Namen vorhanden ist, werden Sie automatisch zum Formular für das Bearbeiten der Seite weitergeleitet. Im nächsten Schritt können Sie diese Aufgabe einem Projekt zuordnen.
+{{#forminput:form=Aufgabe|autocomplete on category=Aufgabe}}
+
+&lt;/noinclude&gt;&lt;includeonly&gt;
+__NOTOC__
+&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+{{{for template|Aufgabe}}}
+==Priorität==
+&lt;div class=&quot;editproperty&quot;&gt;[http://biowikifarm.net/v-mfn/wiki/Property:Aufgabe/Priorität Edit property]&lt;/div&gt;
+{{{field|Priorität|input type=dropdown|property=Aufgabe/Priorität|default=Wichtig|values from property=Aufgabe/Priorität}}}
+
+==Status==
+&lt;div class=&quot;editproperty&quot;&gt;[http://biowikifarm.net/v-mfn/wiki/Property:Aufgabe/Status Edit property]&lt;/div&gt;
+{{{field|Status|input type=dropdown|property=Aufgabe/Status|default=Neu|values from property=Aufgabe/Status}}}
+
+==Kurzbeschreibung==
+&lt;div class=&quot;editproperty&quot;&gt;[http://biowikifarm.net/v-mfn/wiki/Property:Kurzbeschreibung Edit property]&lt;/div&gt;
+{{{field|Kurzbeschreibung|input type=textarea|rows=10|editor=wikieditor}}}
+
+==Erstelldatum==
+&lt;div class=&quot;editproperty&quot;&gt;[http://biowikifarm.net/v-mfn/wiki/Property:Erstelldatum Edit property]&lt;/div&gt;
+&lt;table class=&quot;metadata&quot;&gt;&lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;{{{field|Erstelldatum|input type=date}}}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+==Bearbeiter==
+&lt;div class=&quot;editproperty&quot;&gt;[http://biowikifarm.net/v-mfn/wiki/Property:Bearbeiter Edit property]&lt;/div&gt;
+{{{field|Bearbeiter|input type=text with autocomplete|values from namespace=User}}}
+
+==Lösung==
+&lt;div class=&quot;editproperty&quot;&gt;[http://biowikifarm.net/v-mfn/wiki/Property:Lösung Edit property]&lt;/div&gt;
+{{{field|Lösung|input type=textarea|rows=10|editor=wikieditor}}}
+
+==Hinweise==
+&lt;div class=&quot;editproperty&quot;&gt;[http://biowikifarm.net/v-mfn/wiki/Property:Hinweise Edit property]&lt;/div&gt;
+{{{field|Hinweise|input type=textarea|rows=10|editor=wikieditor}}}
+
+{{{end template}}}
+
+{{{standard input|minor edit}}} {{{standard input|watch}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+&lt;/includeonly&gt;
+=Offene Aufgaben=
+&lt;table class=&quot;aufgaben&quot;&gt;
+&lt;tr&gt;
+   &lt;th&gt;Neu&lt;/th&gt;
+   &lt;th&gt;In Bearbeitung&lt;/th&gt;
+   &lt;th&gt;Bereit&lt;/th&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+   &lt;td&gt;
+   {{Portlet 
+   | titel = Priorität: Kritisch
+   | link= :Kategorie:Aufgabe/Kritisch/Neu   
+   | inhalt = 
+&lt;categorytree mode=pages hideroot=true&gt;Aufgabe/Kritisch/Neu&lt;/categorytree&gt;
+&lt;categorytree mode=pages hideroot=true&gt;Aufgabe/Kritisch/Überarbeiten&lt;/categorytree&gt;
+   }}
+   &lt;/td&gt;
+   &lt;td&gt;
+   {{Portlet 
+   | titel = Priorität: Kritisch
+   | link= :Kategorie:Aufgabe/Kritisch/In Bearbeitung
+   | style=height:100%;
+   | inhalt = &lt;categorytree mode=pages hideroot=true&gt;Aufgabe/Kritisch/In Bearbeitung&lt;/categorytree&gt;
+   }}
+   &lt;/td&gt;
+   &lt;td&gt;
+   {{Portlet 
+   | titel = Priorität: Kritisch
+   | link= :Kategorie:Aufgabe/Kritisch/Bereit
+   | inhalt = &lt;categorytree mode=pages hideroot=true&gt;Aufgabe/Kritisch/Bereit&lt;/categorytree&gt;
+   }}
+   &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+   &lt;td&gt;
+   {{Portlet 
+   | titel = Priorität: Wichtig
+   | link= :Kategorie:Aufgabe/Wichtig/Neu
+   | inhalt = 
+&lt;categorytree mode=pages hideroot=true&gt;Aufgabe/Wichtig/Neu&lt;/categorytree&gt;
+&lt;categorytree mode=pages hideroot=true&gt;Aufgabe/Wichtig/Überarbeiten&lt;/categorytree&gt;
+   }}
+   &lt;/td&gt;
+   &lt;td&gt;
+   {{Portlet 
+   | titel = Priorität: Wichtig
+   | link= :Kategorie:Aufgabe/Wichtig/In Bearbeitung
+   | inhalt = &lt;categorytree mode=pages hideroot=true&gt;Aufgabe/Wichtig/In Bearbeitung&lt;/categorytree&gt;
+   }}
+   &lt;/td&gt;
+   &lt;td&gt;
+   {{Portlet 
+   | titel = Priorität: Wichtig
+   | link= :Kategorie:Aufgabe/Wichtig/Bereit
+   | inhalt = &lt;categorytree mode=pages hideroot=true&gt;Aufgabe/Wichtig/Bereit&lt;/categorytree&gt;
+   }}
+   &lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+   &lt;td&gt;
+   {{Portlet 
+   | titel = Priorität: Niedrig
+   | link= :Kategorie:Aufgabe/Niedrig/Neu
+   | inhalt = 
+&lt;categorytree mode=pages hideroot=true&gt;Aufgabe/Niedrig/Neu&lt;/categorytree&gt;
+&lt;categorytree mode=pages hideroot=true&gt;Aufgabe/Niedrig/Überarbeiten&lt;/categorytree&gt;
+   }}
+   &lt;/td&gt;
+   &lt;td&gt;
+   {{Portlet 
+   | titel = Priorität: Niedrig
+   | link= :Kategorie:Aufgabe/Niedrig/In Bearbeitung
+   | inhalt = &lt;categorytree mode=pages hideroot=true&gt;Aufgabe/Niedrig/In Bearbeitung&lt;/categorytree&gt;
+   }}
+   &lt;/td&gt;
+   &lt;td&gt;
+   {{Portlet 
+   | titel = Priorität: Niedrig
+   | link= :Kategorie:Aufgabe/Niedrig/Bereit
+   | inhalt = &lt;categorytree mode=pages hideroot=true&gt;Aufgabe/Niedrig/Bereit&lt;/categorytree&gt;
+   }}
+   &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&amp;nbsp;
+
+[[:Category:Aufgabe/Archiviert | Papierkorb]]
+[[Category:Issue Tracker]]</text>
+      <sha1>j0qiqvvkqe269dk13bjce2ifbu6wdw9</sha1>
+    </revision>
+  </page>
+</mediawiki>
